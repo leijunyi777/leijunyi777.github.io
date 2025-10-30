@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人学术页面</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin: 0 auto 20px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        section {
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-color);
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .skill-item {
+            background: var(--light-color);
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .project-card {
+            border: 1px solid var(--light-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-img {
+            height: 180px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+        }
+        
+        .project-content {
+            padding: 20px;
+        }
+        
+        .project-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .project-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .project-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .links-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .link-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--light-color);
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .link-item:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+        
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- 替换为您的头像 -->
+            <div class="avatar">
+                <!-- 替换为您的图片路径 -->
+                <img src="content\photo.jpg" alt="photo">
+            </div>
+            <h1>Junyi.Lei</h1>
+            <p class="subtitle">Robotices</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="bio">
+            <h2>Profile</h2>
+            <!-- 替换为您的个人简介 -->
+            <p>BE, Mechanical Engineering, Beijing University of Technology,2019-2023</p>
+    	    <p>Structural Engineer,BYD Precision Manufacture Co, Ltd.2023-2025</p>
+            <p>Msc,Robotices with Extend Research,University of Manchester, 2025-now</p>
+        </section>
+        
+        <section id="skills">
+            <h2>技能专长</h2>
+            <div class="skills-container">
+                <!-- 替换为您的技能列表 -->
+                <div class="skill-item">技能1</div>
+                <div class="skill-item">技能2</div>
+                <div class="skill-item">技能3</div>
+                <div class="skill-item">技能4</div>
+                <div class="skill-item">技能5</div>
+                <div class="skill-item">技能6</div>
+            </div>
+        </section>
+        
+        <section id="objectives">
+            <h2>职业目标与研究兴趣</h2>
+            <!-- 替换为您的职业目标和研究兴趣 -->
+            <p>在这里描述您的职业目标、研究兴趣以及您希望在学术或专业领域实现的目标。内容应简洁明了，突出您的专业方向。</p>
+        </section>
+        
+        <section id="projects">
+            <h2>项目展示</h2>
+            <div class="projects-grid">
+                <!-- 替换为您的项目信息 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <!-- 替换为项目图片或视频 -->
+                        <i class="fas fa-image fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">项目名称1</div>
+                        <p>项目简短描述，突出项目的目标、方法和成果。</p>
+                        <div class="project-links">
+                            <a href="#">项目报告</a>
+                            <a href="#">代码仓库</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <!-- 替换为项目图片或视频 -->
+                        <i class="fas fa-video fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">项目名称2</div>
+                        <p>项目简短描述，突出项目的目标、方法和成果。</p>
+                        <div class="project-links">
+                            <a href="#">项目报告</a>
+                            <a href="#">演示视频</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <!-- 替换为项目图片或视频 -->
+                        <i class="fas fa-chart-bar fa-3x"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">项目名称3</div>
+                        <p>项目简短描述，突出项目的目标、方法和成果。</p>
+                        <div class="project-links">
+                            <a href="#">项目报告</a>
+                            <a href="#">数据集</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="links-container">
+            <!-- 替换为您的实际链接 -->
+            <a href="https://github.com/yourusername" class="link-item" target="_blank">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="path/to/your/cv.pdf" class="link-item" target="_blank">
+                <i class="fas fa-file-pdf"></i>
+                <span>个人简历</span>
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" class="link-item" target="_blank">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 您的姓名 - 个人学术页面</p>
+        </div>
+    </footer>
+</body>
+</html>
